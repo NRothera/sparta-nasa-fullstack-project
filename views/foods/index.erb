@@ -1,0 +1,6 @@
+<% @foods.each do |food| %>
+  <div id="content">
+    <h3><a href="/<%= food.id %>"><%= food.title %></a></h3>
+    <img src="<%= food.image%>" alt="">
+  </div><!-- -->
+<% end %>
