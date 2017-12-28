@@ -59,6 +59,7 @@ class DeliciousFoodsController < Sinatra::Base
     # Becuase we set the title and body in the models attr_accessor we can edit them from outside the object. Here we are setting the values of the title and body to be the information the user put in the form
     food.title = params[:title]
     food.body = params[:body]
+    food.image = params[:image]
 
     # Save is a instance method that we can use to save the new Post into the db
     food.save
@@ -81,6 +82,7 @@ class DeliciousFoodsController < Sinatra::Base
     food.id = params[:id]
     food.title = params[:title]
     food.body = params[:body]
+    food.image = params[:image]
 
     # Use the instance method save to update the post
     food.save

@@ -12,9 +12,9 @@
     <p id='body'><%= @food.body %></p>
     <img src="<%= @food.image %>" alt="">
     </div>
+    <button id="edit" type="button" name="button"><a href='/<%= @food.id %>/edit'>Edit</a></button>
 
     <form action=" <%= @food.id %>" method="POST">
-      <button id="edit" type="button" name="button"><a href='/<%= @food.id %>/edit'>Edit</a></button>
       <input type="hidden" name="_method" value="DELETE">
       <input id="delete" type="submit" name="name" value="Delete X">
     </form>
