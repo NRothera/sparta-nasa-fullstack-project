@@ -97,7 +97,7 @@ class DeliciousFoodsController < Sinatra::Base
     id = params[:id].to_i
 
     # We can use the Class method destroy to remove the post from the db
-    DelciousFood.destroy(id)
+    DeliciousFood.destroy(id)
 
     # Redirect to / to show all the posts
     redirect "/"
