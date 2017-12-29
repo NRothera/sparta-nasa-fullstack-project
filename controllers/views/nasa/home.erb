@@ -1,0 +1,69 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+
+<nav>
+<a href="/">Homepage</a>
+<a href="/nasa/feed">Nasa Feed</a>
+<a href="/nasa/lookup">Nasa Lookup</a>
+<a href="/food/new">Add new food</a>
+</nav>
+
+
+<div id='api_content'>
+  <% near_earth_object = @keys['near_earth_objects'] %>
+  <% content = near_earth_object[@today][5] %>
+  <% diameter = content['estimated_diameter'] %>
+  <% diameter_kilometers = diameter['kilometers'] %>
+  <% diameter_meters = diameter['meters'] %>
+  <% diameter_miles = diameter['miles'] %>
+  <% diameter_feet = diameter['feet'] %>
+  <% close = content["close_approach_data"][0] %>
+  <% speed = close["relative_velocity"] %>
+  <% miss = close['miss_distance'] %>
+  Element Count = <%= @keys['element_count'] %>
+  <br>
+  neo_reference_id = <%= content['neo_reference_id'] %>
+  <br>
+  name = <%= content['name'] %>
+  <br>
+  nasa_jpl_url = <a id='nasa_jpg' href= '<%= content["nasa_jpl_url"] %>' ><%= content["nasa_jpl_url"] %></a>
+  <br>
+  absolute_magnitude_h = <%= content["absolute_magnitude_h"] %>
+  <br>
+  estimated_diameter_min in kilometers = <%= diameter_kilometers["estimated_diameter_min"] %>
+  <br>
+  estimated_diameter_max = <%= diameter_kilometers["estimated_diameter_max"] %>
+  <br>
+  estimated diameter min in meters = <%= diameter_meters["estimated_diameter_min"] %>
+  <br>
+  estimated diameter max in meters = <%= diameter_meters["estimated_diameter_max"] %>
+  <br>
+  estimated diameter min in miles = <%= diameter_miles["estimated_diameter_min"] %>
+  <br>
+  estimated diameter max in miles = <%= diameter_miles["estimated_diameter_max"] %>
+  <br>
+  estimated diameter min in feet = <%= diameter_feet["estimated_diameter_min"] %>
+  <br>
+  estimated diameter max in feet = <%= diameter_feet["estimated_diameter_max"] %>
+  <br>
+  Asteroid is dangerous = <%= content["is_potentially_hazardous_asteroid"] %>
+  <br>
+  Date of close approach = <%= close["close_approach_date"] %>
+  <br>
+  Epoch date of close approach = <%= close["epoch_date_close_approach"] %>
+  <br>
+  speed in km/s = <%= speed["kilometers_per_second"] %>
+  <br>
+  speed in km/h = <%= speed["kilometers_per_hour"] %>
+  <br>
+  speed in mp/h = <%= speed['miles_per_hour'] %>
+  <br>
+  astronomical miss distance = <%= miss["astronomical"] %>
+  <br>
+  lunar miss distance = <%= miss['lunar'] %>
+  <br>
+  miss distance in km = <%= miss["kilometers"] %>
+  <br>
+  miss distance in miles = <%= miss["miles"] %>
+  <br>
+  orbiting body = <%= close["orbiting_body"] %>
+</div>

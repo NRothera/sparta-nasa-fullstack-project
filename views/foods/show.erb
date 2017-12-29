@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-      <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+      <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
   </head>
   <body>
 
@@ -12,9 +12,9 @@
     <p id='body'><%= @food.body %></p>
     <img src="<%= @food.image %>" alt="">
     </div>
-    <button id="edit" type="button" name="button"><a href='/<%= @food.id %>/edit'>Edit</a></button>
+    <button id="edit" type="button" name="button"><a href='/food/<%= @food.id %>/edit'>Edit</a></button>
 
-    <form action=" <%= @food.id %>" method="POST">
+    <form action=" /food/<%= @food.id %>" method="POST">
       <input type="hidden" name="_method" value="DELETE">
       <input id="delete" type="submit" name="name" value="Delete X">
     </form>

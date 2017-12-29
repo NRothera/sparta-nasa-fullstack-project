@@ -22,25 +22,28 @@ class NasaApiController < Sinatra::Base
 
   end
 
-  get '/nasa/feed' do
-    nasa_feed_array = []
-    @nasa_feed = HTTP.get("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym").to_s
+  get '/' do
+    @today = Time.now.strftime("%Y-%m-%d")
+    url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=#{@today}&end_date=#{@today}&api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym"
+    response = HTTParty.get(url)
+    @keys = response.parsed_response
+
+    erb :'nasa/home'
 
   end
 
   get '/nasa/lookup' do
-    @nasa_lookup = HTTP.get("https://api.nasa.gov/neo/rest/v1/neo/3542519?api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym").to_s
-    p @nasa_lookup
+    url = "https://api.nasa.gov/neo/rest/v1/neo/3542519?api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym"
+    response = HTTParty.get(url)
+    @keys = response.parsed_response
+
   end
 
   get '/nasa/browse' do
-    @nasa_browse = HTTP.get("https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym").to_s
-    p @nasa_browse
+    url = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym"
+    response = HTTparty.get(url)
+    @keys = response.parsed_response
+
   end
 
-  # A get request to /new will respond with a template with our new form that the user can complete to add a new post
-
-    # @feed_api = JSON.parse(self.class.get("start_date=2015-09-07&end_date=2015-09-08&api_key=DEMO_KEY").body)
-    #
-    # erb :'nasa/feed'
 end
