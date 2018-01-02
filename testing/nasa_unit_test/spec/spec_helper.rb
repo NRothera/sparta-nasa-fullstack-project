@@ -1,11 +1,8 @@
 require '../../controllers/api/nasa_api_controller'
+require '../../controllers/delicious_food_controller'
 require 'sinatra'
 require "sinatra/base"
 require 'rack/test'
-
-def app
-  NasaApiController.new
-end
 
 RSpec.configure do|config|
   config.color = true

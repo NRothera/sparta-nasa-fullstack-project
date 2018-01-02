@@ -3,9 +3,6 @@ require 'sinatra'
 require "sinatra/base"
 require 'rack/test'
 
-def app
-  DeliciousFoodsController.new
-end
 
 RSpec.configure do|config|
   config.color = true

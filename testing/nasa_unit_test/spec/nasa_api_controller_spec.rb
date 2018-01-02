@@ -5,6 +5,11 @@ describe NasaApiController do
   context 'requesting information on nasa api controller works' do
 
   describe "GET '/'" do
+
+      def app
+        NasaApiController.new
+      end
+
      it "loads homepage" do
        get '/'
        expect(last_response).to be_ok

@@ -19,7 +19,7 @@ class NasaBrowseApi
   end
 
   def get_near_earth_object
-    @nasa_browse_data['near_earth_objects'][2]
+    @nasa_browse_data['near_earth_objects'][1]
   end
 
   def get_neo_reference_id
