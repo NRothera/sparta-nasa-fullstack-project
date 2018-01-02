@@ -1,5 +1,7 @@
 require 'httparty'
 require 'json'
+require 'Sinatra'
+require 'sinatra/reloader' if development?
 
 class NasaApiController < Sinatra::Base
   # Sets root as the parent-directory of the current file
@@ -17,10 +19,6 @@ class NasaApiController < Sinatra::Base
   end
 
   # A get request to the / route will respond with our index template with all the posts from the model
-  get "/nasa/homepage" do
-    # render our index page
-
-  end
 
   get '/' do
     @today = Time.now.strftime("%Y-%m-%d")
@@ -37,12 +35,16 @@ class NasaApiController < Sinatra::Base
     response = HTTParty.get(url)
     @keys = response.parsed_response
 
+    erb :'nasa/lookup'
+
   end
 
   get '/nasa/browse' do
     url = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym"
-    response = HTTparty.get(url)
+    response = HTTParty.get(url)
     @keys = response.parsed_response
+
+    erb :'nasa/browse'
 
   end
 

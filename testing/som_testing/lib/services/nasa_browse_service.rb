@@ -1,40 +1,41 @@
 require 'httparty'
 require 'json'
 
-class NasaLookupApi
+class NasaBrowseApi
 
-  attr_accessor :nasa_lookup_data
+  attr_accessor :nasa_browse_data
 
   def initialize
-    @nasa_lookup_data = nil
+    @nasa_browse_data = nil
   end
 
   include HTTParty
 
-  base_uri "https://api.nasa.gov/neo/rest/v1/neo"
+  base_uri 'https://api.nasa.gov/neo/rest/v1/neo/browse?'
 
-  def get_lookup_api
-    @nasa_lookup_data = JSON.parse(self.class.get("/3542519?api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym").body)
+  def get_browse_api
+    today = Time.now.strftime("%Y-%m-%d")
+    @nasa_browse_data = JSON.parse(self.class.get("&api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym").body)
   end
 
-  def get_content
-    @nasa_lookup_data
+  def get_near_earth_object
+    @nasa_browse_data['near_earth_objects'][0]
   end
 
   def get_neo_reference_id
-    get_content['neo_reference_id'].to_i
+    get_near_earth_object['neo_reference_id'].to_i
   end
 
   def get_neo_reference_id_length
-    get_content['neo_reference_id'].length
+    get_near_earth_object['neo_reference_id'].length
   end
 
   def get_absolute_magnitue
-    get_content['absolute_magnitude_h']
+    get_near_earth_object['absolute_magnitude_h']
   end
 
   def get_diameter
-    get_content['estimated_diameter']
+    get_near_earth_object['estimated_diameter']
   end
 
   def get_diameter_kilometers
@@ -90,7 +91,7 @@ class NasaLookupApi
   end
 
   def get_close
-    get_content['close_approach_data'][0]
+    get_near_earth_object['close_approach_data'][0]
   end
 
   def get_date_close_approach
@@ -140,5 +141,6 @@ class NasaLookupApi
   def get_orbiting_body
     get_close['orbiting_body']
   end
+
 
 end

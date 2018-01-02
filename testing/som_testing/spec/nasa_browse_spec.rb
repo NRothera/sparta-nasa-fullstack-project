@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe NasaLookupApi do
-  context 'requesting information on nasa lookup api works correctly' do
+describe NasaBrowseApi do
+  context 'requesting information on nasa feed api works correctly' do
 
     before(:all) do
-      @nasa = NasaApi.new.nasa_lookup_data
-      @nasa.get_lookup_api
+      @nasa = NasaApi.new.nasa_browse_data
+      @nasa.get_browse_api
     end
 
-    it "should have content as kind of hash" do
-      expect(@nasa.get_content).to be_kind_of(Hash)
+    it "should have near earth object as kind of hash" do
+      expect(@nasa.get_near_earth_object).to be_kind_of(Hash)
     end
 
     it 'should have a neo reference id as a integer' do

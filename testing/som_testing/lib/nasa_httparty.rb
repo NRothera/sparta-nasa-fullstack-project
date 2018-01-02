@@ -1,5 +1,6 @@
 require_relative 'services/nasa_feed_service'
 require_relative 'services/nasa_lookup_service'
+require_relative 'services/nasa_browse_service'
 
 class NasaApi
 
@@ -10,4 +11,9 @@ class NasaApi
   def nasa_lookup_data
     NasaLookupApi.new
   end
+
+  def nasa_browse_data
+    NasaBrowseApi.new
+  end
+  
 end

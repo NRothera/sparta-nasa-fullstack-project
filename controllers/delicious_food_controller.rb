@@ -25,6 +25,19 @@ class DeliciousFoodsController < Sinatra::Base
 
   end
 
+  get '/food/' do
+
+    # Page title
+    @title = "Food Posts"
+
+    # Get all the posts from our model Post. `all` is a Class method which we can call if use the class first. This is not tied to an instance but we can just use the method
+    @foods = DeliciousFood.all
+
+    # render our index page
+    erb :'foods/homepage'
+
+  end
+
   # A get request to /new will respond with a template with our new form that the user can complete to add a new post
   get '/food/new'  do
 
@@ -51,7 +64,7 @@ class DeliciousFoodsController < Sinatra::Base
   end
 
   # A post request to / will create a new post with the imformation the user entered which is stored in the params
-  post '/food' do
+  post '/food/' do
 
     # Create a new instance of our Post class
     food = DeliciousFood.new
