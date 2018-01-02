@@ -14,12 +14,12 @@ class NasaBrowseApi
   base_uri 'https://api.nasa.gov/neo/rest/v1/neo/browse?'
 
   def get_browse_api
-    today = Time.now.strftime("%Y-%m-%d")
+
     @nasa_browse_data = JSON.parse(self.class.get("&api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym").body)
   end
 
   def get_near_earth_object
-    @nasa_browse_data['near_earth_objects'][0]
+    @nasa_browse_data['near_earth_objects'][2]
   end
 
   def get_neo_reference_id

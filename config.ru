@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pg'
+require 'rack/test'
+require 'sinatra/base'
 require 'json'
 require 'net/http'
 require 'http'

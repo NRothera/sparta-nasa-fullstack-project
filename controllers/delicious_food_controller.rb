@@ -1,3 +1,8 @@
+require 'httparty'
+require 'json'
+require 'Sinatra'
+require 'sinatra/reloader' if development?
+
 class DeliciousFoodsController < Sinatra::Base
 
   # Sets root as the parent-directory of the current file

@@ -64,24 +64,24 @@ describe NasaBrowseApi do
       expect(@nasa.get_feet_max).to be_kind_of(Float)
     end
 
-    it 'should have get close data as kind of hash' do
-      expect(@nasa.get_close).to be_kind_of(Hash)
+    it 'should have get close data as kind of hash or be nil' do
+      expect(@nasa.get_close).to be_kind_of(Hash).or be_nil
     end
 
-    it 'should have date of close approach as kind of String' do
-      expect(@nasa.get_date_close_approach).to be_kind_of(String)
+    it 'should have date of close approach as kind of String or be nil' do
+      expect(@nasa.get_date_close_approach).to be_kind_of(String).or be_nil
     end
 
-    it 'should have date of approach have length of 10' do
-      expect(@nasa.get_date_close_approach.length).to eql(10)
+    it 'should have date of approach have length of 10 or be nil' do
+      expect(@nasa.get_date_close_approach.length).to eql(10).or be_nil
     end
 
-    it 'should have epoch close approach as kind of integer' do
-      expect(@nasa.get_epoch_close_approach).to be_kind_of(Integer)
+    it 'should have epoch close approach as kind of integer or be nil' do
+      expect(@nasa.get_epoch_close_approach).to be_kind_of(Integer).or be_nil
     end
 
-    it 'should have speed info as kind of hash' do
-      expect(@nasa.get_speed).to be_kind_of(Hash)
+    it 'should have speed info as kind of hash or be nil' do
+      expect(@nasa.get_speed).to be_kind_of(Hash).or be_nil
     end
 
     it 'should have speed in km/s to be a float' do

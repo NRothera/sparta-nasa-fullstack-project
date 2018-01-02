@@ -84,6 +84,11 @@ br {
   background-image: url('https://i.pinimg.com/originals/59/c5/6f/59c56f9bec8d18ae24db8bee6c19f1c8.gif')
 }
 
+.key {
+  text-align: left;
+  font-weight: bold;
+}
+
 body {
   height:100%;
   min-height:100%;
