@@ -1,0 +1,122 @@
+<body id='nasa_pages'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+
+  <nav>
+    <a href="/">Homepage</a>
+    <a href="/nasa/browse">Nasa Browse</a>
+    <a href="/nasa/lookup">Nasa Lookup</a>
+    <a href="/food">Food</a>
+    </nav>
+
+    <div id='api_content'>
+    <% near_earth_object = @keys['near_earth_objects'] %>
+    <% random_number = rand(6) %>
+    <% content = near_earth_object[@today][random_number] %>
+    <% diameter = content['estimated_diameter'] %>
+    <% diameter_kilometers = diameter['kilometers'] %>
+    <% diameter_meters = diameter['meters'] %>
+    <% diameter_miles = diameter['miles'] %>
+    <% diameter_feet = diameter['feet'] %>
+    <% close = content["close_approach_data"][0] %>
+    <% speed = close["relative_velocity"] %>
+    <% miss = close['miss_distance'] %>
+    <h1>Meteor Name: <%= content['name'] %></h1>
+    <table>
+      <tr>
+        <td class='key'> Element Count </td>
+        <td> <%= @keys['element_count'] %> </td>
+      </tr>
+      <tr>
+        <td class='key'> neo_reference_id</td>
+        <td> <%= content['neo_reference_id'] %></td>
+      </tr>
+    <tr>
+      <td class='key'>nasa_jpl_url </td>
+      <td><a id='nasa_jpg' href= '<%= content["nasa_jpl_url"] %>' ><%= content["nasa_jpl_url"] %></a></td>
+    </tr>
+    <tr>
+      <td class='key'>absolute_magnitude_h </td>
+      <td><%= content["absolute_magnitude_h"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>estimated_diameter_min in kilometers</td>
+      <td><%= diameter_kilometers["estimated_diameter_min"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>estimated_diameter_max</td>
+      <td><%= diameter_kilometers["estimated_diameter_max"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>estimated diameter min in meters</td>
+      <td><%= diameter_meters["estimated_diameter_min"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>estimated diameter max in meters</td>
+      <td><%= diameter_meters["estimated_diameter_max"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>estimated diameter min in miles</td>
+      <td><%= diameter_miles["estimated_diameter_min"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>estimated diameter max in miles</td>
+      <td><%= diameter_miles["estimated_diameter_max"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>estimated diameter min in feet</td>
+      <td><%= diameter_feet["estimated_diameter_min"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>estimated diameter max in feet</td>
+      <td><%= diameter_feet["estimated_diameter_max"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>Asteroid is dangerous</td>
+      <td><%= content["is_potentially_hazardous_asteroid"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>Date of close approach</td>
+      <td><%= close["close_approach_date"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>Epoch date of close approach</td>
+      <td><%= close["epoch_date_close_approach"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>speed in km/s</td>
+      <td><%= speed["kilometers_per_second"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>speed in km/h</td>
+      <td><%= speed["kilometers_per_hour"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>speed in mp/h</td>
+      <td><%= speed['miles_per_hour'] %></td>
+    </tr>
+    <tr>
+      <td class='key'>astronomical miss distance</td>
+      <td><%= miss["astronomical"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>lunar miss distance</td>
+      <td><%= miss['lunar'] %></td>
+    </tr>
+    <tr>
+      <td class='key'>miss distance in km</td>
+      <td><%= miss["kilometers"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>miss distance in miles</td>
+      <td><%= miss["miles"] %></td>
+    </tr>
+    <tr>
+      <td class='key'>orbiting body</td>
+      <td><%= close["orbiting_body"] %></td>
+    </tr>
+    </table>
+  </div>
+
+
+</body>
