@@ -12,12 +12,16 @@ describe NasaLookupApi do
       expect(@nasa.get_content).to be_kind_of(Hash)
     end
 
-    it 'should have a neo reference id as a integer' do
-      expect(@nasa.get_neo_reference_id).to be_kind_of(Integer)
+    it 'should have a neo reference id as a string' do
+      expect(@nasa.get_neo_reference_id).to be_kind_of(String)
     end
 
     it 'should have a neo reference length of 7' do
       expect(@nasa.get_neo_reference_id_length).to eql(7)
+    end
+
+    it 'should have meteor name as kind of string' do
+      expect(@nasa.get_meteor_name).to be_kind_of(String)
     end
 
     it 'should have absolute_magnitude_h as kind of float' do

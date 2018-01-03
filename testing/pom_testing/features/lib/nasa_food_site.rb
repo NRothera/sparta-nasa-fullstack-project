@@ -2,6 +2,8 @@ require_relative 'pages/homepage'
 require_relative 'pages/browse_page'
 require_relative 'pages/new_food_page'
 require_relative 'pages/food_homepage_page'
+require_relative 'pages/show_page'
+require_relative 'pages/edit_resource_page'
 
 
 module NasaFoodSite
@@ -20,6 +22,14 @@ module NasaFoodSite
 
   def food_homepage_page
     FoodHomepagePage.new
+  end
+
+  def show_page
+    ShowPage.new
+  end
+
+  def edit_food_page
+    EditFoodPage.new
   end
 
 end

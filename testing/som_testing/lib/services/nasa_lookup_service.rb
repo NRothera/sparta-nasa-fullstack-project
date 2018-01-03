@@ -22,11 +22,15 @@ class NasaLookupApi
   end
 
   def get_neo_reference_id
-    get_content['neo_reference_id'].to_i
+    get_content['neo_reference_id']
   end
 
   def get_neo_reference_id_length
     get_content['neo_reference_id'].length
+  end
+
+  def get_meteor_name
+    get_content['name']
   end
 
   def get_absolute_magnitue

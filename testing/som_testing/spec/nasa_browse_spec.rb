@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe NasaBrowseApi do
-  context 'requesting information on nasa feed api works correctly' do
+  context 'requesting information on nasa browse api works correctly' do
 
     before(:all) do
       @nasa = NasaApi.new.nasa_browse_data

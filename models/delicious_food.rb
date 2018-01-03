@@ -24,7 +24,7 @@ class DeliciousFood
 
     conn =self.open_connection
 
-    sql = "SELECT id, title, body, image FROM delicious_food ORDER BY id ASC"
+    sql = "SELECT id, title, body, image FROM delicious_food ORDER BY id DESC"
 
     results = conn.exec(sql)
 
