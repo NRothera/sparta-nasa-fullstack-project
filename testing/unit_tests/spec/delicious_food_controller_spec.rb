@@ -10,8 +10,14 @@ describe DeliciousFoodsController do
      describe "GET '/food'" do
 
        it "loads food homepage" do
-         get '/food/'
-         expect(last_response).to be_ok
+         get '/food'
+       end
+     end
+
+     describe "GET /food/new" do
+       it 'loads new food page' do
+         get '/food/new'
+         expect(last_response).to be_ok?
        end
      end
 
