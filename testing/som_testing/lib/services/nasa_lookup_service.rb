@@ -33,6 +33,10 @@ class NasaLookupApi
     get_content['name']
   end
 
+  def get_nasa_jpl_url
+    get_content['nasa_jpl_url']
+  end
+
   def get_absolute_magnitue
     get_content['absolute_magnitude_h']
   end
@@ -94,55 +98,105 @@ class NasaLookupApi
   end
 
   def get_close
-    get_content['close_approach_data'][0]
+    close = []
+    close.push(get_content['close_approach_data'][0])
+    close
   end
 
   def get_date_close_approach
-    get_close['close_approach_date']
+    date=[]
+    get_close.each do |x|
+      date.push(x['close_approach_date'])
+    end
+    date
   end
 
   def get_epoch_close_approach
-    get_close['epoch_date_close_approach']
+    epoch=[]
+    get_close.each do |x|
+      epoch.push(x['epoch_date_close_approach'])
+    end
+    epoch
   end
 
   def get_speed
-    get_close['relative_velocity']
+    speed=[]
+    get_close.each do |x|
+      speed.push(x['relative_velocity'])
+    end
+    speed
   end
 
   def get_speed_km_s
-    get_speed['kilometers_per_second'].to_f
+    km=[]
+    get_speed.each do |x|
+      km.push(x['kilometers_per_second'].to_f)
+    end
+    km
   end
 
   def get_speed_km_h
-    get_speed['kilometers_per_hour'].to_f
+    km=[]
+    get_speed.each do |x|
+      km.push(x['kilometers_per_hour'].to_f)
+    end
+    km
   end
 
   def get_speed_mp_h
-    get_speed['miles_per_hour'].to_f
+    mp=[]
+    get_speed.each do |x|
+      mp.push(x['miles_per_hour'].to_f)
+    end
+    mp
   end
 
   def miss_data
-    get_close['miss_distance']
+    miss=[]
+    get_close.each do |x|
+      miss.push(x['miss_distance'])
+    end
+    miss
   end
 
   def get_astronomical_miss
-    miss_data['astronomical'].to_f
+    astron=[]
+    miss_data.each do |x|
+      astron.push(x['astronomical'])
+    end
+    astron
   end
 
   def get_lunar_miss
-    miss_data['lunar'].to_f
+    lunar=[]
+    miss_data.each do |x|
+      lunar.push(x['lunar'])
+    end
+    lunar
   end
 
   def get_miss_distance_km
-    miss_data['kilometers']
+    kilometers=[]
+    miss_data.each do |x|
+      kilometers.push(x['kilometers'])
+    end
+    kilometers
   end
 
   def get_miss_distance_miles
-    miss_data['miles']
+    miles=[]
+    miss_data.each do |x|
+      miles.push(x['miles'])
+    end
+    miles
   end
 
   def get_orbiting_body
-    get_close['orbiting_body']
+    orbiting=[]
+    get_close.each do |x|
+      orbiting.push(x['orbiting_body'])
+    end
+    orbiting
   end
 
 end

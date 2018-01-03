@@ -24,6 +24,10 @@ describe NasaLookupApi do
       expect(@nasa.get_meteor_name).to be_kind_of(String)
     end
 
+    it 'should have jpl url as kind of String' do
+      expect(@nasa.get_nasa_jpl_url).to be_kind_of(String)
+    end
+
     it 'should have absolute_magnitude_h as kind of float' do
       expect(@nasa.get_absolute_magnitue).to be_kind_of(Float)
     end
@@ -69,59 +73,87 @@ describe NasaLookupApi do
     end
 
     it 'should have get close data as kind of hash' do
-      expect(@nasa.get_close).to be_kind_of(Hash)
+      @nasa.get_close.each do |x|
+        expect(x).to be_kind_of(Hash)
+      end
     end
 
     it 'should have date of close approach as kind of String' do
-      expect(@nasa.get_date_close_approach).to be_kind_of(String)
+      @nasa.get_date_close_approach.each do |x|
+        expect(x).to be_kind_of(String)
+      end
     end
 
     it 'should have date of approach have length of 10' do
-      expect(@nasa.get_date_close_approach.length).to eql(10)
+      @nasa.get_date_close_approach.each do |x|
+        expect(x.length).to eql(10)
+      end
     end
 
     it 'should have epoch close approach as kind of integer' do
-      expect(@nasa.get_epoch_close_approach).to be_kind_of(Integer)
+      @nasa.get_epoch_close_approach.each do|x|
+        expect(x).to be_kind_of(Integer)
+      end
     end
 
     it 'should have speed info as kind of hash' do
-      expect(@nasa.get_speed).to be_kind_of(Hash)
+      @nasa.get_speed.each do |x|
+        expect(x).to be_kind_of(Hash)
+      end
     end
 
     it 'should have speed in km/s to be a float' do
-      expect(@nasa.get_speed_km_s).to be_kind_of(Float)
+      @nasa.get_speed_km_s.each do |x|
+        expect(x).to be_kind_of(Float)
+      end
     end
 
     it 'should have speed in km/h to be a float' do
-      expect(@nasa.get_speed_km_h).to be_kind_of(Float)
+      @nasa.get_speed_km_h.each do |x|
+        expect(x).to be_kind_of(Float)
+      end
     end
 
     it 'should have speed in mp/h to be a float' do
-      expect(@nasa.get_speed_mp_h).to be_kind_of(Float)
+      @nasa.get_speed_mp_h.each do |x|
+        expect(x).to be_kind_of(Float)
+      end
     end
 
     it 'should have miss data as kind of hash' do
-      expect(@nasa.miss_data).to be_kind_of(Hash)
+      @nasa.miss_data.each do |x|
+        expect(x).to be_kind_of(Hash)
+      end
     end
 
     it 'should have astronomical miss as kind of float' do
-      expect(@nasa.get_astronomical_miss).to be_kind_of(Float)
+      @nasa.get_astronomical_miss.each do |x|
+        expect(x).to be_kind_of(String)
+      end
     end
 
     it 'should have lunar miss as kind of float' do
-      expect(@nasa.get_lunar_miss).to be_kind_of(Float)
+      @nasa.get_lunar_miss.each do |x|
+        expect(x).to be_kind_of(String)
+      end
     end
 
     it 'should have miss in km as kind of String' do
-      expect(@nasa.get_miss_distance_km).to be_kind_of(String)
+      @nasa.get_miss_distance_km.each do |x|
+        expect(x).to be_kind_of(String)
+      end
     end
 
     it 'should have miss in miles as kind of String' do
-      expect(@nasa.get_miss_distance_miles).to be_kind_of(String)
+      @nasa.get_miss_distance_miles.each do |x|
+        expect(x).to be_kind_of(String)
+      end
     end
 
     it 'should have orbiting body as kind of string' do
-      expect(@nasa.get_orbiting_body).to be_kind_of(String)
+      @nasa.get_orbiting_body.each do |x|
+        expect(x).to be_kind_of(String)
+      end
     end
 
 
