@@ -192,6 +192,12 @@ describe NasaBrowseApi do
       end
     end
 
+    it 'should have orbit_determination_date length as 14' do
+      @nasa.get_orbit_determination_date.each do |x|
+        expect(x.length).to eql(19)
+      end
+    end
+
     it 'should have orbit uncertainty as kind of string' do
       @nasa.get_orbit_uncertainty.each do |x|
         expect(x).to be_kind_of(String)
