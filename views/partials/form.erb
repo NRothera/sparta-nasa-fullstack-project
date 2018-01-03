@@ -1,18 +1,18 @@
 <form id="edit_form" action="/food/<%= @food.id %>" method="POST">
   <div>
     <label>Meal Name</label>
-    <input id="name" type="text" name="title" value="<%= @food.title %>" placeholder="Enter the name of your meal">
+    <input id="meal_name" type="text" name="title" value="<%= @food.title %>" placeholder="Enter the name of your meal">
   </div>
   <div>
     <label>Body</label>
-    <textarea name="body" rows="8" cols="40" placeholder="Tell us about your meal"><%= @food.body %></textarea>
+    <textarea id="meal_description" name="body" rows="8" cols="40" placeholder="Tell us about your meal"><%= @food.body %></textarea>
   </div>
   <div>
     <label>Image</label>
-    <textarea name="image" rows="1" cols="40" placeholder="Please enter the link to your image"><%= @food.image %></textarea>
+    <textarea id="image_link" name="image" rows="1" cols="40" placeholder="Please enter the link to your image"><%= @food.image %></textarea>
   </div>
   <div>
-    <input type="submit" value="Save Post">
+    <input id='save' type="submit" value="Save Post">
   </div>
 
   <% if (@food.id) %>

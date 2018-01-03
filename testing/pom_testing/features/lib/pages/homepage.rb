@@ -12,7 +12,7 @@ class HomePage
     visit(HOMEPAGE_URL)
   end
 
-  def lookup_link
+  def find_lookup_link
     find(LOOKUP_LINK_ID)
   end
 
