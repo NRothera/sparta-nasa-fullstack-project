@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
-
+<body id='nasa_pages'>
 <nav>
 <a id='homepage' href="/">Homepage</a>
 <a id='browse' href="/nasa/browse">Nasa Browse</a>
@@ -18,15 +18,12 @@
   <% speed = close["relative_velocity"] %>
   <% miss = close['miss_distance'] %>
   <h1>Meteor Name: <%= near_earth_object['name'] %></h1>
+    <h4>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></h4>
   <table>
     <tr>
       <td class='key'> neo_reference_id</td>
       <td> <%= near_earth_object['neo_reference_id'] %></td>
     </tr>
-  <tr>
-    <td class='key'>nasa_jpl_url </td>
-    <td><a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></td>
-  </tr>
   <tr>
     <td class='key'>absolute_magnitude_h </td>
     <td><%= near_earth_object["absolute_magnitude_h"] %></td>
@@ -109,3 +106,4 @@
   </tr>
   </table>
 </div>
+</body>

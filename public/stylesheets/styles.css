@@ -14,11 +14,12 @@ nav {
 }
 
 nav a {
-  color:white;
-  font-size: 30px;
+  color:blue;
+  font-size: 20px;
   text-decoration: none;
   margin-left: 20px;
   display: inline-block;
+  margin-top: 15px;
 }
 
 nav a:hover {
@@ -67,11 +68,11 @@ br {
   width: 400px;
   border-right: 10px solid black;
   border-left: 10px solid black;
-  margin: auto;
-  background-color: white;
-  display: inline-block;
+  background-color: black;
   position: relative;
+  padding-top: 20px;
   top:40px;
+  margin: auto;
 }
 
 #delete {
@@ -100,7 +101,8 @@ body {
 }
 
 #nasa_pages {
-  background-color: white;
+  background-color: black;
+  background-image:
 }
 table {
   margin: auto;
@@ -108,5 +110,9 @@ table {
 
 td {
   border-top: solid black 2px;
+  color: white;
+}
 
+div h1, h4 {
+  color: white;
 }

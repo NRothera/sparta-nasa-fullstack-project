@@ -22,6 +22,7 @@
     <% speed = close["relative_velocity"] %>
     <% miss = close['miss_distance'] %>
     <h1>Meteor Name: <%= content['name'] %></h1>
+    <h4>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= content["nasa_jpl_url"] %>' ><%= content["nasa_jpl_url"] %></a></h4>
     <table>
       <tr>
         <td class='key'> Element Count </td>
@@ -31,10 +32,6 @@
         <td class='key'> neo_reference_id</td>
         <td> <%= content['neo_reference_id'] %></td>
       </tr>
-    <tr>
-      <td class='key'>nasa_jpl_url </td>
-      <td><a id='nasa_jpg' href= '<%= content["nasa_jpl_url"] %>' ><%= content["nasa_jpl_url"] %></a></td>
-    </tr>
     <tr>
       <td class='key'>absolute_magnitude_h </td>
       <td><%= content["absolute_magnitude_h"] %></td>
