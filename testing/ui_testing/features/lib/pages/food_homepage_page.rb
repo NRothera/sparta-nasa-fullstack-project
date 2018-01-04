@@ -5,7 +5,7 @@ class FoodHomepagePage
 
   HOMEPAGE_LINK_ID = '#homepage'
   NEW_FOOD_LINK_ID = '#new_food'
-  FOOD_TITLE_ID = '#title14'
+  FOOD_TITLE_ID = '#title18'
 
   def find_new_food_link
     find(NEW_FOOD_LINK_ID)

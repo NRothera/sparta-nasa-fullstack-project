@@ -76,12 +76,18 @@ br {
 }
 
 #delete {
-  background-color: red;
-  height:200px;
-  width:200px;
+  background-color: grey;
+  height:40px;
+  width:80px;
+  border-radius: 10px;
+  margin-top: 40px;
 }
 
 #edit {
+  background-color: grey;
+  height:40px;
+  width:80px;
+  border-radius: 10px;
 
 }
 
@@ -114,5 +120,9 @@ td {
 }
 
 div h1, h4 {
+  color: white;
+}
+
+#body {
   color: white;
 }

@@ -26,7 +26,7 @@ class DeliciousFoodsController < Sinatra::Base
     @foods = DeliciousFood.all
 
     # render our index page
-    erb :'foods/homepage'
+    erb :'ufos/homepage'
 
   end
 
@@ -39,7 +39,7 @@ class DeliciousFoodsController < Sinatra::Base
     @foods = DeliciousFood.all
 
     # render our index page
-    erb :'foods/homepage'
+    erb :'ufos/homepage'
 
   end
 
@@ -50,7 +50,7 @@ class DeliciousFoodsController < Sinatra::Base
     @food = DeliciousFood.new
 
     # Render the new template
-    erb :'foods/new'
+    erb :'ufos/new'
 
   end
 
@@ -64,14 +64,13 @@ class DeliciousFoodsController < Sinatra::Base
     @food = DeliciousFood.find(id)
 
     # Render the show template
-    erb :'foods/show'
+    erb :'ufos/show'
 
   end
 
   # A post request to / will create a new post with the imformation the user entered which is stored in the params
   post '/ufo/' do
 
-    # Create a new instance of our Post class
     food = DeliciousFood.new
 
     # Becuase we set the title and body in the models attr_accessor we can edit them from outside the object. Here we are setting the values of the title and body to be the information the user put in the form
@@ -134,10 +133,8 @@ class DeliciousFoodsController < Sinatra::Base
     @food = DeliciousFood.find(id)
 
     # Render the edit template
-    erb :'foods/edit'
+    erb :'ufo/edit'
 
   end
-
-
 
 end

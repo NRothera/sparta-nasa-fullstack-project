@@ -37,7 +37,7 @@ describe NasaApiController do
     describe "GET '/nasa/lookup'" do
 
       it 'loads the nasa lookup meteor page' do
-        get '/nasa/lookup' 
+        get '/nasa/lookup'
         expect(last_response).to be_ok
       end
 
@@ -46,5 +46,8 @@ describe NasaApiController do
         expect(last_response.body).to include("orbiting body")
       end
     end
+
+
+
   end
 end
