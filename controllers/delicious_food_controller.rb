@@ -17,7 +17,7 @@ class DeliciousFoodsController < Sinatra::Base
   end
 
   # A get request to the / route will respond with our index template with all the posts from the model
-  get '/food' do
+  get '/ufo' do
 
     # Page title
     @title = "Food Posts"
@@ -30,7 +30,7 @@ class DeliciousFoodsController < Sinatra::Base
 
   end
 
-  get '/food/' do
+  get '/ufo/' do
 
     # Page title
     @title = "Food Posts"
@@ -44,7 +44,7 @@ class DeliciousFoodsController < Sinatra::Base
   end
 
   # A get request to /new will respond with a template with our new form that the user can complete to add a new post
-  get '/food/new'  do
+  get '/ufo/new'  do
 
     # Create a new instance of our Post object which will be empty but will allow our form partial to switch between a new and edit request
     @food = DeliciousFood.new
@@ -55,7 +55,7 @@ class DeliciousFoodsController < Sinatra::Base
   end
 
   # A get request to /:id will respond with a the show template with the requested post
-  get '/food/:id' do
+  get '/ufo/:id' do
 
     # Get the ID from the params and turn it in to an integer
     id = params[:id].to_i
@@ -69,7 +69,7 @@ class DeliciousFoodsController < Sinatra::Base
   end
 
   # A post request to / will create a new post with the imformation the user entered which is stored in the params
-  post '/food/' do
+  post '/ufo/' do
 
     # Create a new instance of our Post class
     food = DeliciousFood.new
@@ -83,12 +83,12 @@ class DeliciousFoodsController < Sinatra::Base
     food.save
 
     # After the save we request the / route and display all the posts
-    redirect "/food"
+    redirect "/ufo"
   end
 
 
   # A put request to the /:id will will update an existing post
-  put '/food/:id'  do
+  put '/ufo/:id'  do
 
     # The id of the post we want to update, we pulled this information from request params
     id = params[:id].to_i
@@ -106,12 +106,12 @@ class DeliciousFoodsController < Sinatra::Base
     food.save
 
     # Redirect to / to show all the posts
-    redirect '/food'
+    redirect '/ufo'
 
   end
 
   # A delete request to /:id will delete the specified post from the db
-  delete '/food/:id'  do
+  delete '/ufo/:id'  do
 
     # The id of the post we want to delete, we pulled this information from request params
     id = params[:id].to_i
@@ -120,12 +120,12 @@ class DeliciousFoodsController < Sinatra::Base
     DeliciousFood.destroy(id)
 
     # Redirect to / to show all the posts
-    redirect "/food"
+    redirect "/ufo"
 
   end
 
   # A request to /:id/edit will respond with a the edit template with the post data of the post we can want to update
-  get '/food/:id/edit'  do
+  get '/ufo/:id/edit'  do
 
     # The id of the post we want to update, we pulled this information from request params
     id = params[:id].to_i

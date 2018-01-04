@@ -14,7 +14,6 @@ require_relative 'controllers/api/nasa_api_controller.rb'
 run Rack::Cascade.new ([
   NasaApiController,
   DeliciousFoodsController
-
   ])
 
 use Rack::MethodOverride
