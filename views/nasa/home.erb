@@ -11,7 +11,7 @@
 
     <div id='api_content'>
     <% near_earth_object = @keys['near_earth_objects'] %>
-    <% random_number = rand(6) %>
+    <% random_number = rand(2) %>
     <% content = near_earth_object[@today][random_number] %>
     <% diameter = content['estimated_diameter'] %>
     <% diameter_kilometers = diameter['kilometers'] %>
@@ -36,7 +36,7 @@
       <td class='key'>absolute_magnitude_h </td>
       <td><%= content["absolute_magnitude_h"] %></td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td class='key'>estimated_diameter_min in kilometers</td>
       <td><%= diameter_kilometers["estimated_diameter_min"] %></td>
     </tr>
@@ -59,7 +59,7 @@
     <tr>
       <td class='key'>estimated diameter max in miles</td>
       <td><%= diameter_miles["estimated_diameter_max"] %></td>
-    </tr>
+    </tr> -->
     <tr>
       <td class='key'>estimated diameter min in feet</td>
       <td><%= diameter_feet["estimated_diameter_min"] %></td>
@@ -76,7 +76,7 @@
       <td class='key'>Date of close approach</td>
       <td><%= close["close_approach_date"] %></td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td class='key'>Epoch date of close approach</td>
       <td><%= close["epoch_date_close_approach"] %></td>
     </tr>
@@ -87,7 +87,7 @@
     <tr>
       <td class='key'>speed in km/h</td>
       <td><%= speed["kilometers_per_hour"] %></td>
-    </tr>
+    </tr> -->
     <tr>
       <td class='key'>speed in mp/h</td>
       <td><%= speed['miles_per_hour'] %></td>

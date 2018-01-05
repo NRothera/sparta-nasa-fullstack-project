@@ -20,19 +20,18 @@
   <% miss = close['miss_distance'] %>
   <h1>Meteor Name: <%= near_earth_object['name'] %></h1>
   <table>
+    <h4>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></h4>
     <tr>
       <td class='key'> neo_reference_id</td>
       <td> <%= near_earth_object['neo_reference_id'] %></td>
     </tr>
   <tr>
-    <td class='key'>nasa_jpl_url </td>
-    <td><a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></td>
   </tr>
   <tr>
     <td class='key'>absolute_magnitude_h </td>
     <td><%= near_earth_object["absolute_magnitude_h"] %></td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class='key'>estimated_diameter_min in kilometers</td>
     <td><%= diameter_kilometers["estimated_diameter_min"] %></td>
   </tr>
@@ -55,7 +54,7 @@
   <tr>
     <td class='key'>estimated diameter max in miles</td>
     <td><%= diameter_miles["estimated_diameter_max"] %></td>
-  </tr>
+  </tr> -->
   <tr>
     <td class='key'>estimated diameter min in feet</td>
     <td><%= diameter_feet["estimated_diameter_min"] %></td>
@@ -72,7 +71,7 @@
     <td class='key'>Date of close approach</td>
     <td><%= close["close_approach_date"] %></td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class='key'>Epoch date of close approach</td>
     <td><%= close["epoch_date_close_approach"] %></td>
   </tr>
@@ -84,7 +83,7 @@
     <td class='key'>speed in km/h</td>
     <td><%= speed["kilometers_per_hour"] %></td>
   </tr>
-  <tr>
+  <tr> -->
     <td class='key'>speed in mp/h</td>
     <td><%= speed['miles_per_hour'] %></td>
   </tr>

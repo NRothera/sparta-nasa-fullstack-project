@@ -6,6 +6,8 @@ require_relative '../../../controllers/delicious_food_controller'
 describe DeliciousFoodsController do
   context 'requesting information on delicious food controller works' do
 
+    include Rack::Test::Methods
+
      def app
       DeliciousFoodsController.new
      end
@@ -21,7 +23,7 @@ describe DeliciousFoodsController do
      describe "GET /ufo/new" do
 
        it 'loads new ufo page' do
-         get '/food/new'
+         get '/ufo/new'
          expect(last_response).to be_ok
        end
      end
