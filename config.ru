@@ -16,4 +16,6 @@ run Rack::Cascade.new ([
   UFOController
   ])
 
+run Sinatr::Application
+
 use Rack::MethodOverride
