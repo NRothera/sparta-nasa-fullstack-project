@@ -27,7 +27,8 @@ nav a:hover {
 }
 
 h3 {
- line-height: 1px;
+  color:white;
+  line-height: 1px;
 }
 
 nav a:hover{
@@ -98,6 +99,7 @@ br {
 .key {
   text-align: left;
   font-weight: bold;
+  font-size: 18px;
 }
 
 body {
@@ -107,8 +109,7 @@ body {
 }
 
 #nasa_pages {
-  background-color: black;
-  background-image:
+  background-image: url('https://wallpapercave.com/wp/pEeUsp1.jpg')
 }
 table {
   margin: auto;
@@ -129,4 +130,16 @@ div h1, h4 {
 
 .labels {
   color: white;
+}
+
+#welcome {
+  padding-top: 50px;
+  color: white;
+  z-index: 1;
+  margin: auto;
+  width: 550px;
+  height: 100px;
+  font-weight: bold;
+  font-size: 26px;
+  text-shadow: 3px 3px 3px blue;
 }

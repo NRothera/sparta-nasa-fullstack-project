@@ -20,7 +20,7 @@
   <% miss = close['miss_distance'] %>
   <h1>Meteor Name: <%= near_earth_object['name'] %></h1>
   <table>
-    <h4>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></h4>
+    <h3>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></h3>
     <tr>
       <td class='key'> neo_reference_id</td>
       <td> <%= near_earth_object['neo_reference_id'] %></td>
@@ -95,10 +95,10 @@
     <td class='key'>lunar miss distance</td>
     <td><%= miss['lunar'] %></td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class='key'>miss distance in km</td>
     <td><%= miss["kilometers"] %></td>
-  </tr>
+  </tr> -->
   <tr>
     <td class='key'>miss distance in miles</td>
     <td><%= miss["miles"] %></td>

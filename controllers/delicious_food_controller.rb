@@ -133,7 +133,7 @@ class DeliciousFoodsController < Sinatra::Base
     @food = DeliciousFood.find(id)
 
     # Render the edit template
-    erb :'ufo/edit'
+    erb :'ufos/edit'
 
   end
 

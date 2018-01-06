@@ -22,7 +22,7 @@
     <% speed = close["relative_velocity"] %>
     <% miss = close['miss_distance'] %>
     <h1>Meteor Name: <%= content['name'] %></h1>
-    <h4>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= content["nasa_jpl_url"] %>' ><%= content["nasa_jpl_url"] %></a></h4>
+    <h3>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= content["nasa_jpl_url"] %>' ><%= content["nasa_jpl_url"] %></a></h3>
     <table>
       <tr>
         <td class='key'> Element Count </td>
@@ -61,15 +61,15 @@
       <td><%= diameter_miles["estimated_diameter_max"] %></td>
     </tr> -->
     <tr>
-      <td class='key'>estimated diameter min in feet</td>
+      <td class='key'>Minumum diameter in feet</td>
       <td><%= diameter_feet["estimated_diameter_min"] %></td>
     </tr>
     <tr>
-      <td class='key'>estimated diameter max in feet</td>
+      <td class='key'>Maximum diameter in feet</td>
       <td><%= diameter_feet["estimated_diameter_max"] %></td>
     </tr>
     <tr>
-      <td class='key'>Asteroid is dangerous</td>
+      <td class='key'>Is the asteroid dangerous?</td>
       <td><%= content["is_potentially_hazardous_asteroid"] %></td>
     </tr>
     <tr>
@@ -89,21 +89,21 @@
       <td><%= speed["kilometers_per_hour"] %></td>
     </tr> -->
     <tr>
-      <td class='key'>speed in mp/h</td>
+      <td class='key'>Speed in mp/h</td>
       <td><%= speed['miles_per_hour'] %></td>
     </tr>
     <tr>
-      <td class='key'>astronomical miss distance</td>
+      <td class='key'>Astronomical miss distance</td>
       <td><%= miss["astronomical"] %></td>
     </tr>
     <tr>
-      <td class='key'>lunar miss distance</td>
+      <td class='key'>Lunar miss distance</td>
       <td><%= miss['lunar'] %></td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td class='key'>miss distance in km</td>
       <td><%= miss["kilometers"] %></td>
-    </tr>
+    </tr> -->
     <tr>
       <td class='key'>miss distance in miles</td>
       <td><%= miss["miles"] %></td>

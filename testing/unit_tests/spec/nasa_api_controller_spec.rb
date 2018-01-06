@@ -19,6 +19,11 @@ describe NasaApiController do
        get '/'
        expect(last_response.body).to include("orbiting body")
      end
+
+     it 'should have last response status of 200' do
+       get '/'
+       expect(last_response.status).to eql(200)
+     end
    end
 
    describe "GET '/nasa/browse'" do
@@ -32,6 +37,11 @@ describe NasaApiController do
         get '/nasa/browse'
         expect(last_response.body).to include("orbiting body")
       end
+
+      it 'should have last response status of 200' do
+        get '/nasa/browse'
+        expect(last_response.status).to eql(200)
+      end
     end
 
     describe "GET '/nasa/lookup'" do
@@ -42,8 +52,13 @@ describe NasaApiController do
       end
 
       it "lookup page includes the words orbiting body" do
-        get '/nasa/browse'
+        get '/nasa/lookup'
         expect(last_response.body).to include("orbiting body")
+      end
+
+      it 'should have last response status of 200' do
+        get '/nasa/lookup'
+        expect(last_response.status).to eql(200)
       end
     end
 
