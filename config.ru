@@ -14,7 +14,7 @@ require_relative 'controllers/api/nasa_api_controller'
 run Rack::Cascade.new ([
   NasaApiController,
   UFOController,
-  
+  Sinatra::Application
   ])
 
 use Rack::MethodOverride
