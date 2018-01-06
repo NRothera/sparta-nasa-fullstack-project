@@ -7,5 +7,6 @@ gem 'sqlite3'
 gem 'rake'
 gem 'rack'
 gem 'logger'
-ruby '2.4.1'
 gem 'http'
+gem "pg"
+ruby '2.4.1'

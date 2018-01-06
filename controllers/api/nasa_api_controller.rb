@@ -1,7 +1,8 @@
 require 'httparty'
 require 'json'
-require 'Sinatra'
+require 'sinatra'
 require 'sinatra/reloader' if development?
+
 
 class NasaApiController < Sinatra::Base
   # Sets root as the parent-directory of the current file
