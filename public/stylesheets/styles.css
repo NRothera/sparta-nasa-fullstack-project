@@ -151,3 +151,26 @@ h3 {
   font-size: 26px;
   text-shadow: 3px 3px 3px blue;
 }
+
+#meal_name {
+  margin:auto;
+  padding-right: 130px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+#meal_description {
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+#description {
+  margin-bottom: 40px;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#image_link {
+  border-radius: 10px;
+}

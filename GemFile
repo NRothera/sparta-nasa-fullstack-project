@@ -9,4 +9,4 @@ gem 'rack'
 gem 'logger'
 gem 'http'
 gem "pg"
-ruby '2.4.1'
+ruby '2.3.1'
