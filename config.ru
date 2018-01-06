@@ -6,14 +6,14 @@ require 'sinatra/base'
 require 'json'
 require 'net/http'
 require 'http'
-require_relative './models/delicious_food.rb'
-require_relative 'controllers/delicious_food_controller.rb'
+require_relative './models/ufo'
+require_relative 'controllers/ufo_controller'
 require_relative 'controllers/api/nasa_api_controller.rb'
 
 
 run Rack::Cascade.new ([
   NasaApiController,
-  DeliciousFoodsController
+  UFOController
   ])
 
 use Rack::MethodOverride

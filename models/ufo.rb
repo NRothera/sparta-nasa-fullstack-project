@@ -1,10 +1,10 @@
-class DeliciousFood
+class UFO
 
   attr_accessor :id, :title, :body, :image
 
   def save
 
-    conn = DeliciousFood.open_connection
+    conn = UFO.open_connection
 
     if (!self.id)
       sql = "INSERT INTO delicious_food (title,body,image) VALUES ('#{self.title}', '#{self.body}', '#{self.image}')"
@@ -58,7 +58,7 @@ class DeliciousFood
 
   def self.hydrate(food_data)
 
-    food = DeliciousFood.new
+    food = UFO.new
 
     food.id = food_data['id']
     food.title = food_data['title']

@@ -3,7 +3,7 @@ require 'json'
 require 'Sinatra'
 require 'sinatra/reloader' if development?
 
-class DeliciousFoodsController < Sinatra::Base
+class UFOController < Sinatra::Base
 
   # Sets root as the parent-directory of the current file
   set :root, File.join(File.dirname(__FILE__), '..')
@@ -23,7 +23,7 @@ class DeliciousFoodsController < Sinatra::Base
     @title = "Food Posts"
 
     # Get all the posts from our model Post. `all` is a Class method which we can call if use the class first. This is not tied to an instance but we can just use the method
-    @foods = DeliciousFood.all
+    @foods = UFO.all
 
     # render our index page
     erb :'ufos/homepage'
@@ -36,7 +36,7 @@ class DeliciousFoodsController < Sinatra::Base
     @title = "Food Posts"
 
     # Get all the posts from our model Post. `all` is a Class method which we can call if use the class first. This is not tied to an instance but we can just use the method
-    @foods = DeliciousFood.all
+    @foods = UFO.all
 
     # render our index page
     erb :'ufos/homepage'
@@ -47,7 +47,7 @@ class DeliciousFoodsController < Sinatra::Base
   get '/ufo/new'  do
 
     # Create a new instance of our Post object which will be empty but will allow our form partial to switch between a new and edit request
-    @food = DeliciousFood.new
+    @food = UFO.new
 
     # Render the new template
     erb :'ufos/new'
@@ -61,7 +61,7 @@ class DeliciousFoodsController < Sinatra::Base
     id = params[:id].to_i
 
     # Use the find Class method in post to retrieve the post we need and assign it to an instance variable post
-    @food = DeliciousFood.find(id)
+    @food = UFO.find(id)
 
     # Render the show template
     erb :'ufos/show'
@@ -71,7 +71,7 @@ class DeliciousFoodsController < Sinatra::Base
   # A post request to / will create a new post with the imformation the user entered which is stored in the params
   post '/ufo/' do
 
-    food = DeliciousFood.new
+    food = UFO.new
 
     # Becuase we set the title and body in the models attr_accessor we can edit them from outside the object. Here we are setting the values of the title and body to be the information the user put in the form
     food.title = params[:title]
@@ -93,7 +93,7 @@ class DeliciousFoodsController < Sinatra::Base
     id = params[:id].to_i
 
     # We use the find Class method to get us the post we need to update
-    food = DeliciousFood.find(id)
+    food = UFO.find(id)
 
     # Manipulate the the intance variables to the new data the user entered
     food.id = params[:id]
@@ -116,7 +116,7 @@ class DeliciousFoodsController < Sinatra::Base
     id = params[:id].to_i
 
     # We can use the Class method destroy to remove the post from the db
-    DeliciousFood.destroy(id)
+    UFO.destroy(id)
 
     # Redirect to / to show all the posts
     redirect "/ufo"
@@ -130,7 +130,7 @@ class DeliciousFoodsController < Sinatra::Base
     id = params[:id].to_i
 
     # Use the find Class method in post to retrieve the post we need and assign it to an instance variable post
-    @food = DeliciousFood.find(id)
+    @food = UFO.find(id)
 
     # Render the edit template
     erb :'ufos/edit'
