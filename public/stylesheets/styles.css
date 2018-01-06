@@ -96,12 +96,6 @@ br {
   background-image: url('https://wallpapertag.com/wallpaper/full/c/b/9/387668-starry-night-background-2078x1303-full-hd.jpg')
 }
 
-.key {
-  text-align: left;
-  font-weight: bold;
-  font-size: 18px;
-}
-
 body {
   height:100%;
   min-height:100%;
@@ -116,8 +110,18 @@ table {
 }
 
 td {
-  border-top: solid black 2px;
   color: white;
+  padding-bottom: 10px;
+  padding-right: 70px;
+  font-size: 23px;
+}
+
+.key {
+  text-align: left;
+  padding-bottom: 10px;
+  padding-right: 70px;
+  font-weight: bold;
+  font-size: 23px;
 }
 
 div h1, h4 {
@@ -130,6 +134,10 @@ div h1, h4 {
 
 .labels {
   color: white;
+}
+
+h3 {
+  padding-bottom: 18px;
 }
 
 #welcome {
