@@ -1,0 +1,29 @@
+<table>
+  <tr class='form_rows'>
+    <form id="edit_form" action="/ufo/<%= @food.id %>" method="POST">
+      <div>
+        <label class='labels'>Meal Name</label>
+        <input id="meal_name" type="text" name="title" value="<%= @food.title %>" placeholder="Enter the name of your meal">
+      </div>
+    </tr>
+    <tr class='form_rows'>
+      <div>
+        <label class='labels'>Description</label>
+        <textarea id="meal_description" name="body" rows="8" cols="40" placeholder="Tell us about your meal"><%= @food.body %></textarea>
+      </div>
+    </tr>
+    <tr class='form_rows'>
+      <div>
+        <label class='labels'>Link to your image</label>
+        <textarea id="image_link" name="image" rows="1" cols="40" placeholder="Please enter the link to your image"><%= @food.image %></textarea>
+      </div>
+    </tr>
+    <div>
+      <input id='save' type="submit" value="Save Post">
+    </div>
+
+    <% if (@food.id) %>
+    <input type="hidden" name="_method" value="PUT">
+    <% end %>
+  </form>
+</table>

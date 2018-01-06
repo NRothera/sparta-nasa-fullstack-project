@@ -1,0 +1,15 @@
+<body class="food_background">
+
+<div id="welcome">
+  Welcome to the UFO sightings homepage. Scroll down to see users posts on the various UFO sightings over the years. Click on each post for more details on that particular sighting
+</div>
+
+<% @foods.each do |food| %>
+  <div id="content">
+    <h3 ><a id='title<%= food.id %>'href="/ufo/<%= food.id %>"><%= food.title %></a></h3>
+    <img class='images' src="<%= food.image%>" alt="">
+  </div>
+
+<% end %>
+
+</body>

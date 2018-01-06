@@ -1,0 +1,153 @@
+* {
+  text-decoration: none;
+}
+
+nav {
+  background-color: black;
+  height:50px;
+  position: absolute;
+  top:0px;
+  width: 100%;
+  left:0px;
+  text-align: center;
+  display: inline-block;
+}
+
+nav a {
+  color:blue;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+nav a:hover {
+  background-color: grey;
+}
+
+h3 {
+  color:white;
+  line-height: 1px;
+}
+
+nav a:hover{
+  background-color: grey;
+}
+
+footer a {
+  font-size: 30px;
+  color:white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+footer a:hover {
+  background-color: grey;
+}
+
+img{
+  width:400px;
+  height:300px;
+  text-align: center;
+  line-height: 5px;
+}
+
+#api_content {
+  margin-top: 100px;
+}
+
+#nasa_jpg {
+  color:blue;
+}
+
+br {
+  padding-top: 30px;
+}
+
+#content {
+  width: 400px;
+  border-right: 10px solid black;
+  border-left: 10px solid black;
+  background-color: black;
+  position: relative;
+  padding-top: 20px;
+  top:40px;
+  margin: auto;
+}
+
+#delete {
+  background-color: grey;
+  height:40px;
+  width:80px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+#edit {
+  background-color: grey;
+  height:40px;
+  width:80px;
+  border-radius: 10px;
+
+}
+
+.food_background {
+  background-image: url('https://wallpapertag.com/wallpaper/full/c/b/9/387668-starry-night-background-2078x1303-full-hd.jpg')
+}
+
+body {
+  height:100%;
+  min-height:100%;
+  text-align: center;
+}
+
+#nasa_pages {
+  background-image: url('https://wallpapercave.com/wp/pEeUsp1.jpg')
+}
+table {
+  margin: auto;
+}
+
+td {
+  color: white;
+  padding-bottom: 10px;
+  padding-right: 70px;
+  font-size: 23px;
+}
+
+.key {
+  text-align: left;
+  padding-bottom: 10px;
+  padding-right: 70px;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+div h1, h4 {
+  color: white;
+}
+
+#body {
+  color: white;
+}
+
+.labels {
+  color: white;
+}
+
+h3 {
+  padding-bottom: 18px;
+}
+
+#welcome {
+  padding-top: 50px;
+  color: white;
+  z-index: 1;
+  margin: auto;
+  width: 550px;
+  height: 100px;
+  font-weight: bold;
+  font-size: 26px;
+  text-shadow: 3px 3px 3px blue;
+}
