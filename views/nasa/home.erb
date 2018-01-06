@@ -11,8 +11,8 @@
 
     <div id='api_content'>
     <% near_earth_object = @keys['near_earth_objects'] %>
-    <% random_number = rand(2) %>
-    <% content = near_earth_object[@today][random_number] %>
+    <% random_number = rand(0) %>
+    <% content = near_earth_object[@today][0] %>
     <% diameter = content['estimated_diameter'] %>
     <% diameter_kilometers = diameter['kilometers'] %>
     <% diameter_meters = diameter['meters'] %>

@@ -9,4 +9,5 @@ end
 And("I change the body and title of the post") do
   edit_food_page.input_meal_name("Tasty Pizza")
   edit_food_page.input_meal_description("I have edited the post")
+  sleep 2
 end
