@@ -21,11 +21,11 @@
     <h3>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></h3>
   <table>
     <tr>
-      <td class='key'> neo_reference_id</td>
+      <td class='key'> Neo reference id</td>
       <td> <%= near_earth_object['neo_reference_id'] %></td>
     </tr>
   <tr>
-    <td class='key'>absolute_magnitude_h </td>
+    <td class='key'>Absolute magnitude h </td>
     <td><%= near_earth_object["absolute_magnitude_h"] %></td>
   </tr>
   <!-- <tr>
@@ -53,15 +53,15 @@
     <td><%= diameter_miles["estimated_diameter_max"] %></td>
   </tr> -->
   <tr>
-    <td class='key'>estimated diameter min in feet</td>
+    <td class='key'>Estimated diameter min in feet</td>
     <td><%= diameter_feet["estimated_diameter_min"] %></td>
   </tr>
   <tr>
-    <td class='key'>estimated diameter max in feet</td>
+    <td class='key'>Estimated diameter max in feet</td>
     <td><%= diameter_feet["estimated_diameter_max"] %></td>
   </tr>
   <tr>
-    <td class='key'>Asteroid is dangerous</td>
+    <td class='key'>Is <%= near_earth_object['name'] %> dangerous?</td>
     <td><%= near_earth_object["is_potentially_hazardous_asteroid"] %></td>
   </tr>
   <tr>
@@ -81,15 +81,15 @@
     <td><%= speed["kilometers_per_hour"] %></td>
   </tr> -->
   <tr>
-    <td class='key'>speed in mp/h</td>
+    <td class='key'>Speed in mp/h</td>
     <td><%= speed['miles_per_hour'] %></td>
   </tr>
   <tr>
-    <td class='key'>astronomical miss distance</td>
+    <td class='key'>Astronomical miss distance</td>
     <td><%= miss["astronomical"] %></td>
   </tr>
   <tr>
-    <td class='key'>lunar miss distance</td>
+    <td class='key'>Lunar miss distance</td>
     <td><%= miss['lunar'] %></td>
   </tr>
   <!-- <tr>
@@ -97,11 +97,11 @@
     <td><%= miss["kilometers"] %></td>
   </tr> -->
   <tr>
-    <td class='key'>miss distance in miles</td>
+    <td class='key'>Miss distance in miles</td>
     <td><%= miss["miles"] %></td>
   </tr>
   <tr>
-    <td class='key'>orbiting body</td>
+    <td class='key'>Orbiting body</td>
     <td><%= close["orbiting_body"] %></td>
   </tr>
   </table>
