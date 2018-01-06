@@ -1,6 +1,6 @@
 require_relative '../../../controllers/api/nasa_api_controller'
-require_relative '../../../controllers/delicious_food_controller'
-require_relative '../../../models/delicious_food'
+require_relative '../../../controllers/ufo_controller'
+require_relative '../../../models/ufo'
 require 'sinatra'
 require "sinatra/base"
 require 'rack/test'

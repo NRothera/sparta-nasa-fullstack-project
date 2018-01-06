@@ -1,13 +1,13 @@
 require_relative 'spec_helper'
 require 'test/unit'
 
-describe DeliciousFoodsController do
+describe UFOController do
   context 'requesting information on UFO controller works' do
 
     include Rack::Test::Methods
 
      def app
-      DeliciousFoodsController.new
+      UFOController.new
      end
 
      describe "GET '/ufo'" do
@@ -20,6 +20,11 @@ describe DeliciousFoodsController do
        it 'should have last response status of 200' do
          get '/ufo'
          expect(last_response.status).to eql(200)
+       end
+
+       it 'should have title of Flatwoods Monster' do
+         get '/ufo', :title => 'Flatwoods Monster'
+         expect(last_response.body).to include('Flatwoods Monster')
        end
      end
 
