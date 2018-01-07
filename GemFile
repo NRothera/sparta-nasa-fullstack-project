@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'selinium'
+gem 'capybara'
+gem 'cucumber'
+gem 'rspec'
+gem 'httparty'
 gem 'sinatra-contrib'
 gem 'activerecord'
 gem 'sqlite3'

@@ -72,6 +72,11 @@ br {
   padding-top: 20px;
   top:40px;
   margin: auto;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  border: 1px #369 solid;
+  border-radius: 10px;
+  background-color: #fafafa;
 }
 
 #delete {
@@ -148,7 +153,7 @@ h3 {
   height: 100px;
   font-weight: bold;
   font-size: 26px;
-  /*text-shadow: 1px 1px 1px blue;*/
+
 }
 
 #meal_name {
@@ -169,9 +174,12 @@ h3 {
 }
 
 #image_link {
+  margin:auto;
+  padding-right: 170px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 10px;
   margin-right: 50px;
-  margin-top: 10px;
 }
 
 .heading {
