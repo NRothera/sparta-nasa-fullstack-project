@@ -92,7 +92,6 @@ br {
   height:40px;
   width:80px;
   border-radius: 10px;
-
 }
 
 .food_background {
@@ -177,7 +176,7 @@ h3 {
   margin:auto;
   padding-right: 170px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
   border-radius: 10px;
   margin-right: 50px;
 }
