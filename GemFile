@@ -10,3 +10,4 @@ gem 'logger'
 gem 'http'
 gem "pg"
 ruby '2.3.1'
+gem 'selenium-webdriver'

@@ -174,3 +174,17 @@ h3 {
 #image_link {
   border-radius: 10px;
 }
+
+.heading {
+  color: blue;
+  text-decoration: none;
+}
+
+#logo {
+  position: absolute;
+  left:20px;
+  top:5px;
+  height:40px;
+  width:50px;
+  z-index: 1;
+}
