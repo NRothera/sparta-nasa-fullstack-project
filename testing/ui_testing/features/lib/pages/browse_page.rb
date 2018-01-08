@@ -17,12 +17,12 @@ class BrowsePage
     find_browse_link.click
   end
 
-  def find_food_link
+  def find_ufo_link
     find(FOOD_HOMEPAGE_LINK_ID)
   end
 
-  def click_food_link
-    find_food_link.click
+  def click_ufo_link
+    find_ufo_link.click
   end
 
 end

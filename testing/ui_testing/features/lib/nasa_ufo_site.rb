@@ -1,12 +1,12 @@
 require_relative 'pages/homepage'
 require_relative 'pages/browse_page'
-require_relative 'pages/new_food_page'
-require_relative 'pages/food_homepage_page'
+require_relative 'pages/new_ufo_page'
+require_relative 'pages/ufo_homepage_page'
 require_relative 'pages/show_page'
 require_relative 'pages/edit_resource_page'
 
 
-module NasaFoodSite
+module NasaUfoSite
 
   def homepage
     HomePage.new
@@ -16,19 +16,19 @@ module NasaFoodSite
     BrowsePage.new
   end
 
-  def new_food_page
-    NewFoodPage.new
+  def new_ufo_page
+    NewUfoPage.new
   end
 
-  def food_homepage_page
-    FoodHomepagePage.new
+  def ufo_homepage_page
+    UfoHomepagePage.new
   end
 
   def show_page
     ShowPage.new
   end
 
-  def edit_food_page
+  def edit_ufo_page
     EditFoodPage.new
   end
 

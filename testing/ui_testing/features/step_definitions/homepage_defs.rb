@@ -16,5 +16,5 @@ end
 
 
 Then("I can click the food homepage link") do
-  browse_page.click_food_link
+  browse_page.click_ufo_link
 end

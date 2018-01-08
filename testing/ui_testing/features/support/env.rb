@@ -1,6 +1,6 @@
 require 'capybara/cucumber'
 require 'capybara/dsl'
-require_relative '../lib/nasa_food_site'
+require_relative '../lib/nasa_ufo_site'
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app,:browser => :chrome)
@@ -13,4 +13,4 @@ Capybara.configure do |config|
   config.default_driver = :chrome # ensures chrome is the default driver
 end
 
-World(NasaFoodSite)
+World(NasaUfoSite)

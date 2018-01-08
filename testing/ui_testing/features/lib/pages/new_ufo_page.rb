@@ -1,6 +1,6 @@
 require 'capybara/dsl'
 
-class NewFoodPage
+class NewUfoPage
   include Capybara::DSL
 
   HOMEPAGE_LINK_ID = '#homepage'
@@ -11,11 +11,11 @@ class NewFoodPage
   SAVE_BUTTON_ID = '#save'
 
 
-  def input_meal_name(name)
+  def input_ufo_name(name)
     fill_in(MEAL_NAME_INPUT_ID, with: name)
   end
 
-  def input_meal_description(body)
+  def input_ufo_description(body)
     fill_in(MEAL_DESCRIPTION_INPUT_ID, with: body)
   end
 
