@@ -8,18 +8,51 @@ The UFO homepage is for displaying information on different UFO sightings over t
 
 # Testing
 
-To use the website, clone the repot and run the seed file in order to fill the database. You may need to set up your own database in Postgresql first. Run bundle install to install all the gems.
-To start testing, cd into the testing folder.
+To use this repot, run the following code in your terminal
+
+```bash
+git clone git@github.com:NRothera/sparta-nasa-fullstack-project.git
+cd sparta-sdet-project
+bundle install
+psql -d delicious_food -f seed.sql
+rackup
+```
+visit the website at http://localhost:9292/
+
+To start testing, cd into the testing folder
+```bach
+cd testing
+```
 
 # Unit Testing
 
- Cd into the unit_testing folder and run rspec in your terminal to see them run. The unit tests test the api controller and the ufo controller and checks that the routes are working.
+Cd into the unit_testing folder and run rspec in your terminal to run the tests.
+
+```bash
+cd unit_testing
+rspec
+```
+
+The unit tests test the api controller and the ufo controller and checks that the routes are working.
 
 # Integration Testing
 
-Cd into the integration_testing folder and run rspec in your folder. The integration tests pull the API information from the NASA website and make sure the correct information is being outputted.
+Cd into the integration_testing folder and run rspec in your folder.
+
+```integration_testing
+cd integration_testing
+rspec
+```
+
+ The integration tests pull the API information from the NASA website and make sure the correct information is being outputted.
 
 # UI Testing
 
-Cd into the ui_testing folder. Make sure you are have the server running by running rackup in your terminal.
+
+Cd into the ui_testing folder and run cucumber to run the tests
+```bach
+cd ui_testing
+cucumber
+```
 Once that is done, run cucumber. This will open the website, check the links are working, create a post, edit the post and delete the post.
+If you want to run a specific feature test, run cucumber followed by the name of the feature file you want to run

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
-gem 'selinium'
+gem 'selenium'
 gem 'capybara'
 gem 'cucumber'
 gem 'rspec'
@@ -11,6 +11,7 @@ gem 'activerecord'
 gem 'sqlite3'
 gem 'rake'
 gem 'rack'
+gem 'rack-test'
 gem 'logger'
 gem 'http'
 gem "pg"
