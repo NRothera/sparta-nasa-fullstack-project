@@ -9,6 +9,7 @@ require 'net/http'
 require_relative './models/ufo'
 require_relative 'controllers/ufo_controller'
 require_relative 'controllers/api/nasa_api_controller'
+require 'rubygems'
 
 use Rack::MethodOverride
 
