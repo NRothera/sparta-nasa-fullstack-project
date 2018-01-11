@@ -15,6 +15,6 @@ And("I can click the browse link") do
 end
 
 
-Then("I can click the food homepage link") do
+Then("I can click the ufo homepage link") do
   browse_page.click_ufo_link
 end
