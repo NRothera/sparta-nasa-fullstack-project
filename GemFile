@@ -16,3 +16,4 @@ gem 'logger'
 gem 'http'
 gem "pg"
 gem 'selenium-webdriver'
+ruby "2.4.1"
