@@ -8,13 +8,13 @@ require 'net/http'
 require 'http'
 require_relative './models/ufo'
 require_relative 'controllers/ufo_controller'
-require_relative 'controllers/api/nasa_api_controller.rb'
+require_relative 'controllers/api/nasa_api_controller'
 
 
 run Rack::Cascade.new ([
   NasaApiController,
-  UFOController
+  UFOController,
+  Sinatra::Application
   ])
-
 
 use Rack::MethodOverride

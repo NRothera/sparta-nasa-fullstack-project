@@ -72,6 +72,10 @@ describe NasaLookupApi do
       expect(@nasa.get_feet_max).to be_kind_of(Float)
     end
 
+    it 'should have danger info to be true or false' do
+      expect(@nasa.get_danger_info).to be_truthy.or be_falsy
+    end
+
     it 'should have get close data as kind of hash' do
       @nasa.get_close.each do |x|
         expect(x).to be_kind_of(Hash)

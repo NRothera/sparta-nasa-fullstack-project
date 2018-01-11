@@ -5,4 +5,4 @@ Feature: Clicking nasa navbar links
     And I can find the lookup link
     And I can click the lookup link
     And I can click the browse link
-    Then I can click the food homepage link
+    Then I can click the ufo homepage link

@@ -1,5 +1,5 @@
 And("I can click on a post") do
-  food_homepage_page.click_food_title
+  ufo_homepage_page.click_ufo_title
 end
 
 And("I can click the edit button") do
@@ -7,7 +7,7 @@ And("I can click the edit button") do
 end
 
 And("I change the body and title of the post") do
-  edit_food_page.input_meal_name("Tasty Pizza")
-  edit_food_page.input_meal_description("I have edited the post")
+  edit_ufo_page.input_ufo_name("Spooky Ufo")
+  edit_ufo_page.input_ufo_description("I have edited the post")
   sleep 2
 end

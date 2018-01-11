@@ -1,7 +1,8 @@
 require 'httparty'
 require 'json'
-require 'Sinatra'
+require 'sinatra'
 require 'sinatra/reloader' if development?
+
 
 class NasaApiController < Sinatra::Base
   # Sets root as the parent-directory of the current file
@@ -31,7 +32,9 @@ class NasaApiController < Sinatra::Base
   end
 
   get '/nasa/lookup' do
-    url = "https://api.nasa.gov/neo/rest/v1/neo/3542519?api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym"
+    ids = [2000433,2000719,2000887,2001036,2001221,2001566]
+    random_id = ids[rand(5)]
+    url = "https://api.nasa.gov/neo/rest/v1/neo/#{random_id}?api_key=t5NgA4dcQzGkSYPn1qGtVF8GhnhyR0lmr2HNpjym"
     response = HTTParty.get(url)
     @keys = response.parsed_response
 

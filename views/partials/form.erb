@@ -8,14 +8,14 @@
     </tr>
     <tr class='form_rows'>
       <div>
-        <label class='labels'>Description</label>
-        <textarea id="meal_description" name="body" rows="8" cols="40" placeholder="Tell us about your meal"><%= @food.body %></textarea>
+        <label class='labels' id='description'>Description</label>
+        <textarea id="meal_description" name="body" rows="8" cols="40" placeholder="Tell us about the sighting"><%= @food.body %></textarea>
       </div>
     </tr>
     <tr class='form_rows'>
       <div>
         <label class='labels'>Link to your image</label>
-        <textarea id="image_link" name="image" rows="1" cols="40" placeholder="Please enter the link to your image"><%= @food.image %></textarea>
+        <textarea id="image_link" name="image" rows='1' placeholder="Image url"><%= @food.image %></textarea>
       </div>
     </tr>
     <div>

@@ -1,7 +1,9 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+<title>Lookup page</title>
 
 <body id='nasa_pages'>
 <nav>
+  <img id='logo' src="https://seeklogo.com/images/N/NASA-logo-BF1554E904-seeklogo.com.png" alt="">
   <a id='homepage' href="/">Homepage</a>
   <a id='browse' href="/nasa/browse">Nasa Browse</a>
   <a id='lookup' href="/nasa/lookup">Nasa Lookup</a>
@@ -20,7 +22,10 @@
   <% miss = close['miss_distance'] %>
   <h1>Meteor Name: <%= near_earth_object['name'] %></h1>
   <table>
-    <h3>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></h3>
+    <br>
+    <h3>For more detailed information on this meteor go to: </h3>
+    <h4> <a id='nasa_jpg' href= '<%= near_earth_object["nasa_jpl_url"] %>' ><%= near_earth_object["nasa_jpl_url"] %></a></h4>
+    <br>
     <tr>
       <td class='key'> Neo reference id</td>
       <td> <%= near_earth_object['neo_reference_id'] %></td>

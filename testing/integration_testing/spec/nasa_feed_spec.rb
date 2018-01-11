@@ -102,6 +102,12 @@ describe NasaFeedApi do
       end
     end
 
+    it 'should have danger info to be true or false' do
+      @nasa.get_danger_info.each do |x|
+        expect(x).to be_truthy.or be_falsy
+      end
+    end
+
     it 'should have get close data as kind of hash' do
       @nasa.get_close.each do |x|
         expect(x).to be_kind_of(Hash)

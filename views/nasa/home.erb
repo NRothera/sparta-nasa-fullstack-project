@@ -1,8 +1,8 @@
 <body id='nasa_pages'>
-
   <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
-
+  <title>Homepage</title>
   <nav>
+    <img id='logo' src="https://seeklogo.com/images/N/NASA-logo-BF1554E904-seeklogo.com.png" alt="">
     <a id='homepage' href="/">Homepage</a>
     <a id='browse' href="/nasa/browse">Nasa Browse</a>
     <a id='lookup' href="/nasa/lookup">Nasa Lookup</a>
@@ -11,8 +11,8 @@
 
     <div id='api_content'>
     <% near_earth_object = @keys['near_earth_objects'] %>
-    <% random_number = rand(0) %>
-    <% content = near_earth_object[@today][0] %>
+    <% random_number = rand(6) %>
+    <% content = near_earth_object[@today][random_number] %>
     <% diameter = content['estimated_diameter'] %>
     <% diameter_kilometers = diameter['kilometers'] %>
     <% diameter_meters = diameter['meters'] %>
@@ -22,7 +22,10 @@
     <% speed = close["relative_velocity"] %>
     <% miss = close['miss_distance'] %>
     <h1>Meteor Name: <%= content['name'] %></h1>
-    <h3>For more detailed information on this meteor go to <a id='nasa_jpg' href= '<%= content["nasa_jpl_url"] %>' ><%= content["nasa_jpl_url"] %></a></h3>
+    <br>
+    <h3>For more detailed information on this meteor go to: </h3>
+    <h4><a id='nasa_jpg' href= '<%= content["nasa_jpl_url"] %>' ><%= content["nasa_jpl_url"] %></a></h4>
+    <br>
     <table>
       <tr>
         <td class='key'> Element Count </td>

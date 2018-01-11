@@ -1,5 +1,4 @@
 require_relative 'spec_helper'
-require 'test/unit'
 
 describe UFOController do
   context 'requesting information on UFO controller works' do
